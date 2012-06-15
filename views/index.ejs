@@ -1,0 +1,20 @@
+<% if (user) { %>
+    <h2><%= user.name %></h2>
+<% } %>
+
+<% if (category_list.length) { %>
+<ul>
+    <!--
+    <li>
+        最新更新(50)
+    </li>
+    -->
+    <% category_list.forEach(function (category) { %>
+    <li>
+        <a href="/category/<%=category.name%>">
+            <%=category.name%><strong>(<%=category.soft_count%>)</strong>
+        </a>
+    </li>
+    <% }) %>
+</ul>  
+<% } %>
